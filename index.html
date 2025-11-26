@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUDDY.COM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Scrolling animation for header */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-scroll {
+      animation: scroll 20s linear infinite;
+    }
+
+    /* Hover transitions for tabs */
+    .tab-1 {
+      width: 240px;
+      transition: width 0.3s ease;
+    }
+    .tab-1:hover {
+      width: 360px;
+    }
+
+    .tab-2 {
+      width: 180px;
+      transition: width 0.3s ease;
+    }
+    .tab-2:hover {
+      width: 280px;
+    }
+
+    .tab-3 {
+      width: 120px;
+      transition: width 0.3s ease;
+    }
+    .tab-3:hover {
+      width: 200px;
+    }
+
+    .tab-bg-static {
+      position: absolute;
+      inset: 0;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .tab-bg-hover {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .tab-container:hover .tab-bg-static {
+      opacity: 0;
+    }
+
+    .tab-container:hover .tab-bg-hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-white flex flex-col" style="background-image: url('YOUR_BACKGROUND_IMAGE_URL'); background-size: cover; background-position: center;">
+    
+    <!-- Scrolling Header Bar -->
+    <div class="bg-black text-white py-1 overflow-hidden">
+      <div class="flex whitespace-nowrap animate-scroll">
+        <div class="flex gap-2">
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo Section -->
+    <div class="py-32 flex justify-center items-center">
+      <a href="#" class="w-64 h-64 border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 transition-colors cursor-pointer overflow-hidden" style="background-image: url('YOUR_LOGO_IMAGE_URL'); background-size: cover; background-position: center;">
+        <span class="text-gray-400">LOGO</span>
+      </a>
+    </div>
+
+    <!-- Product Grid Section -->
+    <div class="flex-1 py-24 px-8 max-w-7xl mx-auto w-full">
+      <div class="flex flex-col gap-6">
+        
+        <!-- First Row - 4 products -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_1_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 1</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 1
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_2_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 2</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 2
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_3_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 3</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 3
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_4_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 4</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 4
+            </a>
+          </div>
+        </div>
+
+        <!-- Second Row - 3 products centered -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto md:w-3/4">
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_5_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 5</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 5
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_6_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 6</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 6
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <a href="#" class="aspect-square border-2 border-gray-300 flex items-center justify-center hover:border-gray-400 hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url('YOUR_PRODUCT_7_IMAGE_URL'); background-size: cover; background-position: center;">
+              <span class="text-gray-400">PRODUCT 7</span>
+            </a>
+            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
+              Product Name 7
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spacer before footer -->
+    <div class="py-32"></div>
+
+    <!-- Footer with Right-side Tabs -->
+    <div class="pb-16 relative">
+      <div class="absolute right-0 bottom-8 flex flex-col gap-4 items-end">
+        
+        <!-- Tab 3 -->
+        <a href="#" class="tab-container tab-3 bg-gray-200 px-8 py-6 rounded-l-lg cursor-pointer overflow-hidden relative">
+          <div class="tab-bg-static" style="background-image: url('https://via.placeholder.com/200x80/cccccc/666666?text=TAB+3');"></div>
+          <div class="tab-bg-hover" style="background-image: url('https://via.placeholder.com/200x80/aaaaaa/444444?text=TAB+3+HOVER');"></div>
+          <span class="text-gray-600 relative z-10">TAB 3</span>
+        </a>
+
+        <!-- Tab 2 -->
+        <a href="#" class="tab-container tab-2 bg-gray-200 px-8 py-6 rounded-l-lg cursor-pointer overflow-hidden relative">
+          <div class="tab-bg-static" style="background-image: url('https://via.placeholder.com/280x80/cccccc/666666?text=TAB+2');"></div>
+          <div class="tab-bg-hover" style="background-image: url('https://via.placeholder.com/280x80/aaaaaa/444444?text=TAB+2+HOVER');"></div>
+          <span class="text-gray-600 relative z-10">TAB 2</span>
+        </a>
+
+        <!-- Tab 1 -->
+        <a href="#" class="tab-container tab-1 bg-gray-200 px-8 py-6 rounded-l-lg cursor-pointer overflow-hidden relative">
+          <div class="tab-bg-static" style="background-image: url('https://via.placeholder.com/360x80/cccccc/666666?text=TAB+1');"></div>
+          <div class="tab-bg-hover" style="background-image: url('https://via.placeholder.com/360x80/aaaaaa/444444?text=TAB+1+HOVER');"></div>
+          <span class="text-gray-600 relative z-10">TAB 1</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
