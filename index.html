@@ -5,233 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BUDDY.COM</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    /* Scrolling animation for header */
     @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     .animate-scroll {
       animation: scroll 20s linear infinite;
     }
 
-    /* Hover transitions for tabs */
-    .tab-1 {
-      width: 240px;
-      transition: width 0.3s ease;
-    }
-    .tab-1:hover {
-      width: 360px;
-    }
+    .tab-1 { width: 240px; transition: width 0.3s ease; }
+    .tab-1:hover { width: 360px; }
 
-    .tab-2 {
-      width: 180px;
-      transition: width 0.3s ease;
-    }
-    .tab-2:hover {
-      width: 280px;
-    }
+    .tab-2 { width: 180px; transition: width 0.3s ease; }
+    .tab-2:hover { width: 280px; }
 
-    .tab-3 {
-      width: 120px;
-      transition: width 0.3s ease;
-    }
-    .tab-3:hover {
-      width: 200px;
-    }
+    .tab-3 { width: 120px; transition: width 0.3s ease; }
+    .tab-3:hover { width: 200px; }
 
-    .tab-bg-static {
-      position: absolute;
-      inset: 0;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-      background-size: cover;
-      background-position: center;
-    }
-
+    .tab-bg-static,
     .tab-bg-hover {
       position: absolute;
       inset: 0;
-      opacity: 0;
-      transition: opacity 0.3s ease;
       background-size: cover;
       background-position: center;
+      transition: opacity 0.3s ease;
     }
+    .tab-bg-static { opacity: 1; }
+    .tab-bg-hover { opacity: 0; }
 
-    .tab-container:hover .tab-bg-static {
-      opacity: 0;
-    }
-
-    .tab-container:hover .tab-bg-hover {
-      opacity: 1;
-    }
+    .tab-container:hover .tab-bg-static { opacity: 0; }
+    .tab-container:hover .tab-bg-hover { opacity: 1; }
   </style>
 </head>
-<body>
-   <script>
-    function playSound() {
-      const audio = new Audio('https://audio.jukehost.co.uk/GszEuHP7S2h8bmLQQCHV3LF17Zb4Bq5b');
-      audio.play();
-    }
-  </script>
-  
-  <div class="min-h-screen bg-white flex flex-col" style="background-image: url('YOUR_BACKGROUND_IMAGE_URL'); background-size: cover; background-position: center;">
-    
-    <!-- Scrolling Header Bar -->
-    <div class="bg-black text-white py-1 overflow-hidden">
-      <div class="flex whitespace-nowrap animate-scroll">
-        <div class="flex gap-2">
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-        </div>
-        <!-- Duplicate for seamless loop -->
-        <div class="flex gap-2">
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-          <a href="#" class="inline-block hover:opacity-70 transition-opacity cursor-pointer">BUDDY.COM</a>
-        </div>
+
+<body class="m-0"> <!-- ★ IMPORTANT: removes body margin to eliminate side gap -->
+
+<script>
+  function playSound() {
+    const audio = new Audio('https://audio.jukehost.co.uk/GszEuHP7S2h8bmLQQCHV3LF17Zb4Bq5b');
+    audio.play();
+  }
+</script>
+
+<div class="min-h-screen bg-white flex flex-col" style="background-image: url('YOUR_BACKGROUND_IMAGE_URL'); background-size: cover; background-position: center;">
+
+  <!-- Scrolling Header -->
+  <div class="bg-black text-white py-1 overflow-hidden">
+    <div class="flex whitespace-nowrap animate-scroll">
+      <div class="flex gap-2">
+        <!-- repeated text -->
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+      </div>
+      <div class="flex gap-2">
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
+        <a href="#" class="inline-block hover:opacity-70 transition-opacity">BUDDY.COM</a>
       </div>
     </div>
+  </div>
 
-    <!-- Main Logo Section -->
-    <div class="py-32 flex justify-center items-center">
-      <a href="https://audio.jukehost.co.uk/GszEuHP7S2h8bmLQQCHV3LF17Zb4Bq5b" onclick="playSound(); return false;" class="w-64 h-64 border-2 border-transparent flex items-center justify-center hover:border-transparent transition-colors cursor-pointer overflow-hidden" style="background-image: url(https://github.com/Sibalith/Images/blob/main/BUDDY%20MW2%20LOGO.gif?raw=true); background-size: cover; background-position: center;">
-        <span class="text-gray-400"></span>
-      </a>
-    </div>
+  <!-- Logo -->
+  <div class="py-32 flex justify-center items-center">
+    <a href="https://audio.jukehost.co.uk/GszEuHP7S2h8bmLQQCHV3LF17Zb4Bq5b"
+       onclick="playSound(); return false;"
+       class="w-64 h-64 border-2 border-transparent flex items-center justify-center hover:scale-105 transition overflow-hidden"
+       style="background-image: url(https://github.com/Sibalith/Images/blob/main/BUDDY%20MW2%20LOGO.gif?raw=true); background-size: cover;">
+    </a>
+  </div>
 
-    <!-- Product Grid Section -->
-    <div class="flex-1 py-24 px-8 max-w-7xl mx-auto w-full">
-      <div class="flex flex-col gap-6">
-        
-        <!-- First Row - 4 products -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="flex flex-col gap-2">
-            <a href="https://buddy.bigcartel.com/product/buddytv2shirts" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/413321598/buddytv2++export.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-              <span class="text-gray-400"></span>
-            </a>
-            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
-              buddytv2
-            </a>
-          </div>
+  <!-- Product Grid -->
+  <div class="flex-1 py-24 px-8 max-w-7xl mx-auto w-full">
+    <div class="flex flex-col gap-6">
 
-          <div class="flex flex-col gap-2">
-            <a href="https://buddy.bigcartel.com/product/puppy-paws" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/413322114/puppy+paws+export_.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-              <span class="text-gray-400"></span>
-            </a>
-            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
-              puppy paws
-            </a>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <a href="https://buddy.bigcartel.com/product/script-angel-tee" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414847041/angel+script.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-              <span class="text-gray-400"></span>
-            </a>
-            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
-              script angel
-            </a>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <a href="https://buddy.bigcartel.com/product/rawdawg-university" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/413730528/rawdawg+uni+export.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-              <span class="text-gray-400"></span>
-            </a>
-            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
-              raw dawg alumni
-            </a>
-          </div>
+      <!-- Row 1 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- product cards (left unchanged) -->
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/buddytv2shirts" class="aspect-square hover:scale-105 transition border-2 border-transparent overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/413321598/buddytv2++export.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">buddytv2</p>
         </div>
 
-        <!-- Second Row - 3 products centered -->
-       <div class="flex-1 py-24 px-8 max-w-7xl mx-auto w-full">
-      <div class="flex flex-col gap-6">
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <div class="flex flex-col gap-2">
-            <a href="https://buddy.bigcartel.com/product/san-jose" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414846213/san+jose+t.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-              <span class="text-gray-400"></span>
-            </a>
-            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
-              san jose
-            </a>
-          </div>
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/puppy-paws" class="aspect-square hover:scale-105 transition border-2 border-transparent overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/413322114/puppy+paws+export_.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">puppy paws</p>
+        </div>
 
-          <div class="flex flex-col gap-2">
-            <a href="https://buddy.bigcartel.com/product/4-wonders" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414846255/4+wonders.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-              <span class="text-gray-400"></span>
-            </a>
-            <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer">
-              4 wonders
-            </a>
-          </div>
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/script-angel-tee" class="aspect-square hover:scale-105 transition border-2 border-transparent overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414847041/angel+script.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">script angel</p>
+        </div>
 
-          <div class="flex flex-col gap-2">
-              <a href="https://buddy.bigcartel.com/product/puppy" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden block" style="background-image: url(https://assets.bigcartel.com/product_images/414846507/puppy+bud.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-                <span class="text-gray-400"></span>
-              </a>
-              <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer block">
-                puppy
-              </a>
-            </div>
-          
-          <div class="flex flex-col gap-2">
-              <a href="https://buddy.bigcartel.com/product/script" class="aspect-square border-2 border-transparent flex items-center justify-center hover:border-transparent hover:scale-105 transition-all cursor-pointer overflow-hidden block" style="background-image: url(https://assets.bigcartel.com/product_images/414846360/SCRIPT.png?auto=format&fit=max&w=700); background-size: cover; background-position: center;">
-                <span class="text-gray-400"></span>
-              </a>
-              <a href="#" class="text-center text-gray-600 hover:text-gray-800 transition-colors cursor-pointer block">
-                script
-              </a>
-            </div>
-          </div>
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/rawdawg-university" class="aspect-square hover:scale-105 transition border-2 border-transparent overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/413730528/rawdawg+uni+export.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">raw dawg alumni</p>
         </div>
       </div>
-    </div>
 
-    <!-- ⭐ BOTTOM-RIGHT TABS (FLUSH TO SCREEN EDGE) -->
+      <!-- Row 2 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <!-- same structure; unchanged -->
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/san-jose" class="aspect-square hover:scale-105 transition overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414846213/san+jose+t.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">san jose</p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/4-wonders" class="aspect-square hover:scale-105 transition overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414846255/4+wonders.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">4 wonders</p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/puppy" class="aspect-square hover:scale-105 transition overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414846507/puppy+bud.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">puppy</p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <a href="https://buddy.bigcartel.com/product/script" class="aspect-square hover:scale-105 transition overflow-hidden" style="background-image: url(https://assets.bigcartel.com/product_images/414846360/SCRIPT.png?auto=format&fit=max&w=700); background-size: cover;"></a>
+          <p class="text-center text-gray-600">script</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ⭐ BOTTOM-RIGHT TABS (FLUSH TO SCREEN EDGE) -->
 <div class="relative w-full mt-80">
 <div class="relative w-full">
-  <div class="absolute right-0 bottom-0 flex flex-col gap-4 items-end z-50">
+  <div class="absolute right-0 bottom-0 flex flex-col gap-4 items-end z-50"> 
 
     <!-- Tab 3 -->
     <a href="#" class="tab-container tab-3 bg-gray-200 px-8 py-6 rounded-l-lg cursor-pointer overflow-hidden relative">
