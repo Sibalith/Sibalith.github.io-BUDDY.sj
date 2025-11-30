@@ -72,6 +72,12 @@
     }
   </style>
 </head>
+  <script>
+    function playSound() {
+      const audio = new Audio('YOUR_SOUND_FILE_URL.mp3');
+      audio.play();
+    }
+  </script>
 <body>
   <div class="min-h-screen bg-white flex flex-col" style="background-image: url('YOUR_BACKGROUND_IMAGE_URL'); background-size: cover; background-position: center;">
     
@@ -128,7 +134,7 @@
 
     <!-- Logo Section -->
     <div class="py-32 flex justify-center items-center">
-      <a href="https://www.myinstants.com/en/instant/mw2hitmarker/?utm_source=copy&utm_medium=share" class="w-64 h-64 border-2 border-transparent flex items-center justify-center hover:border-gray-400 transition-colors cursor-pointer overflow-hidden" style="background-image: url(https://github.com/Sibalith/Images/blob/main/BUDDY%20MW2%20LOGO.gif?raw=true); background-size: cover; background-position: center;">
+      <a href="#" onclick="playSound(); return false;" class="w-64 h-64 border-2 border-transparent flex items-center justify-center hover:border-gray-400 transition-colors cursor-pointer overflow-hidden" style="background-image: url(https://github.com/Sibalith/Images/blob/main/BUDDY%20MW2%20LOGO.gif?raw=true); background-size: cover; background-position: center;">
         <span class="text-gray-400"></span>
       </a>
     </div>
